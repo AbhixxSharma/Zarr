@@ -1,0 +1,28 @@
+///  Cyclic Sort //
+This code is only  when in the question give the ranges like [1 to n] or [0 to n]..
+if index will be start at 0 then i will be start to 0 else i is start 1...
+
+int i=0;
+        while(i<nums.length){
+            int crrt=nums[i]-1;
+            if(nums[i]>0 &&nums[i]<nums.length&& nums[i] != nums[crrt]){
+                swap(nums,i,crrt);
+            }
+            else{
+                i++;
+            }
+        }
+
+        for(int ind=0;ind<nums.length;ind++){
+            if(  nums[ind]!=ind+1){
+                return ind+1;
+            }
+        }
+        return nums.length+1;
+        
+    }
+    public void  swap(int nums[], int f,int s){
+        int temp= nums[f];
+        nums[f]= nums[s];
+        nums[s] =  temp;
+    }
